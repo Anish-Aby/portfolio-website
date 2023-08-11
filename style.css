@@ -1,0 +1,548 @@
+/* boiler-plate */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* removing scorllbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    position: relative;
+}
+
+::selection {
+    background-color: var(--highlight-color);
+}
+
+/* variables */
+:root {
+    --highlight-color: #EB5939;
+    --text-color: #B7AB98;
+    --background-color: #0D0D0D;
+    --width: 70%;
+}
+
+/* highlight */
+.highlight {
+    color: var(--highlight-color);
+}
+
+/* fonts */
+@font-face {
+    font-family: "Avant";
+    src: url("./fonts/AvantGarde/AvantGarde\ Demi.ttf");
+}
+
+@font-face {
+    font-family: "Tsunagi";
+    src: url("./fonts/tsunagi/TsunagiGothic.ttf");
+}
+
+/* main top container */
+.main-top-container {
+    position: relative;
+    width: 100%;
+}
+
+/* ! nav-bar */
+.main-container-nav {
+    padding: 6rem 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* sticky navbar */
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Avant";
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    pointer-events: all;
+}
+
+.right-arrow-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* sticky icons */
+.floating-socials-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 55px;
+}
+
+.social-icons {
+    width: 48px;
+    height: 48px;
+    pointer-events: all;
+}
+
+/* ! true-text containers wrapper */
+.true-text-main-container-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+/* main padding container */
+.main-container-padding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100dvh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* landing-header */
+.landing-section {
+    display: flex;
+    width: 100%;
+    min-height: 100dvh;
+    padding: 2rem 0;
+    justify-content: center;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.name-katakana {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    letter-spacing: 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 110px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px var(--highlight-color);
+    opacity: 25%;
+}
+
+.name-english {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+.landing-body-container {
+    font-family: "Avant", sans-serif;
+    font-size: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* about section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--width);
+    min-height: 100dvh;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.section-heading-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    font-family: "Avant", sans-serif;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.section-japanese-heading {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.7px var(--highlight-color);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 40px;
+}
+
+.about-section-body-content {
+    font-family: "Avant";
+    font-size: 140px;
+}
+
+/* work section */
+.work-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--width);
+    min-height: 100dvh;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.projects-container {
+    font-family: "Avant";
+    font-size: 150px;
+    height: 100%;
+}
+
+.projects-container-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px var(--text-color) solid;
+}
+
+/* technology section */
+.technology-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--width);
+    min-height: 100vh;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.technologies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-family: "Avant", sans-serif;
+    font-size: 150px;
+}
+
+.tech-footer-container {
+    display: flex;
+    justify-content: end;
+    font-family: "Avant", sans-serif;
+    color: var(--highlight-color);
+    font-size: 40px;
+}
+
+/* languages section */
+.languages-section {
+    position: relative;
+    font-family: "Avant";
+    background-color: var(--highlight-color);
+    width: 100%;
+    min-height: 450px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.skills-header {
+    font-size: 40px;
+    color: var(--background-color);
+}
+
+.skills-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 100px;
+}
+
+.skill-text-left {
+    left: 0;
+    top: 6rem;
+    animation: moveleft 30s linear infinite;
+}
+
+.skill-text-right {
+    right: 0;
+    top: 16rem;
+    color: var(--background-color);
+    animation: moveright 30s linear infinite;
+}
+
+@keyframes moveleft {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes moveright {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(50%, 0, 0);
+    }
+}
+
+/* faq section */
+.faq-section-main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: var(--width);
+    min-height: 100dvh;
+    padding: 3rem 0;
+    gap: 2rem;
+}
+
+.faq-questions-container {
+    font-family: "Avant", sans-serif;
+    font-size: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.question {
+    position: relative;
+    border-bottom: 3px solid var(--text-color);
+    padding-bottom: 2rem;
+}
+
+.question-header {
+    cursor: pointer;
+    width: auto;
+    height: fit-content;
+}
+
+.question-wrap {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px max-content;
+    grid-template-rows: 1fr;
+}
+
+.question-status {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--text-color);
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.question-answer {
+    padding-left: 100px;
+    padding-top: 1rem;
+    display: grid;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.2s ease-in-out;
+    display: none;
+}
+
+.open .question-answer {
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
+.open .question-status {
+    background-color: var(--highlight-color);
+    transition: all 0.5s ease-in-out;
+}
+
+/* contact me section */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.contact-section-main-container {
+    width: var(--width);
+}
+
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 3rem 0rem;
+    gap: 3rem;
+    font-family: "Avant", sans-serif;
+    font-size: 80px;
+}
+
+.instagram-container-contact {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.github-container-contact {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.email-container {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.email {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.email-details {
+    font-size: 30px;
+}
+
+/* ! overlay */
+.overlay-text-main-container-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100dvh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    clip-path: circle(400px at var(--x, -50%) var(--y, -50%));
+    transition: clip-path 100ms;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.main-container-padding-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100dvh;
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+}
+
+.name-katakana-overlay {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    letter-spacing: 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 110px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px var(--background-color);
+    opacity: 25%;
+}
+
+.section-japanese-heading-overlay {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px var(--background-color);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 40px;
+}
+
+/* project section */
+.project-container-overlay {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px var(--background-color) solid;
+}
+
+/* languages section */
+.languages-section-overlay {
+    position: relative;
+    font-family: "Avant";
+    background-color: var(--background-color);
+    width: 100%;
+    min-height: 450px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.skills-header-overlay {
+    font-size: 40px;
+    color: var(--text-color);
+}
+
+.skill-text-left-overlay {
+    left: 0;
+    color: var(--highlight-color);
+    top: 6rem;
+    animation: moveleft 30s linear infinite;
+}
+
+.skill-text-right-overlay {
+    right: 0;
+    top: 16rem;
+    color: var(--highlight-color);
+    animation: moveright 30s linear infinite;
+}
+
+/* question section */
+.question-overlay {
+    position: relative;
+    border-bottom: 3px solid var(--background-color);
+    padding-bottom: 2rem;
+}
+
+.question-status-overlay {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--background-color);
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.text-color-change {
+    color: var(--background-color);
+}
