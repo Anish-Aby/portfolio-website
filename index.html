@@ -19,17 +19,24 @@
             <!-- padding main container -->
             <div class="main-container-padding">
                 <section class="landing-section">
-                    <div class="landing-container inflator">
+                    <div class="landing-section-grid-container">
+                        <div class="video-main-container">
+                            <video id="main-landing-video" autoplay muted loop>
+                                <source src="./static/video/clouds.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="landing-container">
                         <div class="name-main-container">
                             <div class="name-katakana">アニッシュ</div>
                             <div class="name-english">Anish . Aby</div>
                         </div>
-                        <div class="landing-body-container">
+                        <div class="landing-body-container inflator">
                             <div class="unsatisfied">UNSATISFIED</div>
                             <div class="curiosity highlight">{ CURIOSITY }</div>
                             <div class="for">FOR</div>
                             <div class="coding">CODING</div>
                         </div>
+                    </div>
                     </div>
                 </section>
                 <!-- about section -->
@@ -167,7 +174,9 @@
         <div class="overlay-text-main-container-wrapper">
             <div class="main-container-padding-overlay">
                 <section class="landing-section">
-                    <div class="landing-container">
+                    <div class="landing-section-grid-container">
+                        <div class="video-main-container"></div>
+                        <div class="landing-container">
                         <div class="name-main-container">
                             <div class="name-katakana-overlay">アニッシュ</div>
                             <div class="name-english">Anish . Aby</div>
@@ -179,6 +188,7 @@
                             <div class="coding">MORE</div>
                         </div>
                     </div>
+                    </div>
                 </section>
                 <!-- about section -->
                 <section class="about-section">
@@ -188,7 +198,7 @@
                     </div>
                     <div class="about-section-body-container">
                         <div class="about-section-body-content inflator">
-                            I also love watching { anime } and playing {video games }.
+                            I also enjoy watching { anime } and playing {video games }.
                         </div>
                     </div>
                 </section>
@@ -339,7 +349,7 @@
     <script>
         var butter = butter.init({
             cancelOnTouch: true,
-            wrapperDamper: 0.04,
+            wrapperDamper: 0.02,
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -122,13 +122,36 @@ body {
     display: flex;
     width: 100%;
     min-height: 100dvh;
-    padding: 2rem 0;
     justify-content: center;
 }
 
+.landing-section-grid-container {
+    width: 100%;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.video-main-container {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#main-landing-video {
+    min-width: 100vw;
+    max-height: 100vh;
+    object-fit: fill;
+}
+
 .landing-container {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 .name-main-container {
@@ -164,6 +187,8 @@ body {
 }
 
 .landing-body-container {
+    justify-self: center;
+    align-self: center;
     font-family: "Avant", sans-serif;
     font-size: 120px;
     display: flex;
