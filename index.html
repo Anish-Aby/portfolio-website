@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Anish-Aby</title>
 </head>
 <body>
-
+    <!-- ! trailer -->
+    <!-- <div id="trailer"></div> -->
     <!-- Main container -->
     <div class="main-top-container" id="butter">
         
@@ -18,7 +21,7 @@
         <div class="true-text-main-container-wrapper">
             <!-- padding main container -->
             <div class="main-container-padding">
-                <section class="landing-section">
+                <section class="landing-section trailer-hide">
                     <div class="landing-section-grid-container">
                         <div class="video-main-container">
                             <video id="main-landing-video" autoplay muted loop>
@@ -40,7 +43,7 @@
                     </div>
                 </section>
                 <!-- about section -->
-                <section class="about-section">
+                <section class="about-section trailer-hide">
                     <div class="section-heading-container">
                         <div class="section-english-heading">ABOUT ME()</div>
                         <div class="section-japanese-heading">私のこと</div>
@@ -52,21 +55,21 @@
                     </div>
                 </section>
                 <!-- work section -->
-                <section class="work-section">
+                <section class="work-section trailer-show" data-cursor="-your-color">
                     <div class="section-heading-container">
                         <div class="section-english-heading">MY WORKS()</div>
                         <div class="section-japanese-heading">プロジェクト</div>
                     </div>
                     <div class="projects-container">
                         <div class="projects-container-grid">
-                            <div class="project-container">EMOJI-BASE</div>
-                            <div class="project-container">BLOGGING SITE</div>
-                            <div class="project-container">GITHUB</div>
+                            <div class="project-container emojibase emoji-base-work-hidden"><div class="project-container-content">EMOJI-BASE</div></div>
+                            <div class="project-container blog blogging-work-hidden"><div class="project-container-content">BLOG WEBSITE</div></div>
+                            <div class="project-container rock github-work-hidden"><div class="project-container-content">ROCK, PAPER & SCISSORS</div></div>
                         </div>
                     </div>
                 </section>
                 <!-- technology section -->
-                <section class="technology-section">
+                <section class="technology-section trailer-show" data-cursor="-your-color">
                     <div class="section-heading-container">
                         <div class="section-english-heading">TECHNOLOGIES()</div>
                         <div class="section-japanese-heading">テクノロジー</div>
@@ -82,7 +85,7 @@
                     </div>
                 </section>
                 <!-- languages section -->
-                <section class="languages-section inflator">
+                <section class="languages-section inflator trailer-hide">
                 <div class="skills-header">Languages</div>
                     <div class="skills-text skill-text-left">
                         Node js&nbsp;&nbsp; React js&nbsp;&nbsp;
@@ -102,7 +105,7 @@
                     </div>
             </section>
             <!-- faq section -->
-            <section class="faq-section-main-container">
+            <section class="faq-section-main-container trailer-show" data-cursor="-your-color">
                     <div class="section-heading-container">
                         <div class="section-english-heading">FAQs()</div>
                         <div class="section-japanese-heading">よくある質問</div>
@@ -119,7 +122,7 @@
                             </div>
                         </div>
                         <!-- question 2 -->
-                        <div class="question">
+                        <div class="question" id="faq-coding">
                             <div class="question-wrap">
                                 <div class="question-status"></div>
                                 <div class="question-header">Why did you start learning coding?</div>
@@ -129,7 +132,7 @@
                             </div>
                         </div>
                         <!-- question 3 -->
-                        <div class="question">
+                        <div class="question"  id="faq-japanese">
                             <div class="question-wrap">
                                 <div class="question-status"></div>
                                 <div class="question-header">Do you speak Japanese?</div>
@@ -139,7 +142,7 @@
                             </div>
                         </div>
                         <!-- question 4 -->
-                        <div class="question">
+                        <div class="question" id="faq-project">
                             <div class="question-wrap">
                                 <div class="question-status"></div>
                                 <div class="question-header">How many projects have you made?</div>
@@ -151,16 +154,16 @@
                     </div>
                 </section>
                 <!-- contact me section -->
-                <section class="contact-section-main-container">
+                <section class="contact-section-main-container trailer-show" data-cursor="-your-color">
                     <div class="section-heading-container">
                         <div class="section-english-heading">CONTACT ME()</div>
                         <div class="section-japanese-heading">連絡先情報</div>
                     </div>
                     <div class="contact-grid-container">
-                        <div class="linkedin-container-contact"><a href="">LinkedIn</a></div>
-                        <div class="blog-container-contact"><a href="">Blog</a></div>
-                        <div class="instagram-container-contact"><a href="">Instagram</a></div>
-                        <div class="github-container-contact"><a href="">Github</a></div>
+                        <div class="linkedin-container-contact contact-pseudo"><a href="">LinkedIn</a></div>
+                        <div class="blog-container-contact contact-pseudo"><a href="">Blog</a></div>
+                        <div class="instagram-container-contact contact-pseudo"><a href="">Instagram</a></div>
+                        <div class="github-container-contact contact-pseudo"><a href="">Github</a></div>
                         <div class="email-container">
                             <div class="email">EMAIL</div>
                             <div class="email-details">anish.abyy@gmail.com</div>
@@ -198,7 +201,7 @@
                     </div>
                     <div class="about-section-body-container">
                         <div class="about-section-body-content inflator">
-                            I also enjoy watching { anime } and playing {video games }.
+                            I also enjoy watching <br/>{ anime } and playing {video games }.
                         </div>
                     </div>
                 </section>
@@ -262,7 +265,7 @@
                         <!-- question 1 -->
                         <div class="question-overlay">
                             <div class="question-wrap">
-                                <div class="question-status-overlay class="text-color-change""></div>
+                                <div class="question-status-overlay text-color-change"></div>
                                 <div class="question-header">What are your hobbies?</div>
                             </div>
                             <div class="question-answer">
@@ -272,7 +275,7 @@
                         <!-- question 2 -->
                         <div class="question-overlay">
                             <div class="question-wrap">
-                                <div class="question-status-overlay class="text-color-change""></div>
+                                <div class="question-status-overlay text-color-change"></div>
                                 <div class="question-header">Why did you start learning coding?</div>
                             </div>
                             <div class="question-answer">
@@ -282,7 +285,7 @@
                         <!-- question 3 -->
                         <div class="question-overlay">
                             <div class="question-wrap">
-                                <div class="question-status-overlay class="text-color-change""></div>
+                                <div class="question-status-overlay text-color-change"></div>
                                 <div class="question-header">Do you speak Japanese?</div>
                             </div>
                             <div class="question-answer">
@@ -309,7 +312,7 @@
                     </div>
                     <div class="contact-grid-container">
                         <div class="linkedin-container-contact"><a class="text-color-change" href="">LinkedIn</a></div>
-                        <div class="blog-container-contact"><a class="text-color-change" href="">Blog</a></div>
+                        <div class="blog-container-contact"><a class="text-color-change" href="">My own website</a></div>
                         <div class="instagram-container-contact"><a class="text-color-change" href="">Instagram</a></div>
                         <div class="github-container-contact"><a class="text-color-change" href="">Github</a></div>
                         <div class="email-container">
@@ -323,10 +326,10 @@
     </div>      <!-- main div-->
 
     <!-- ! navbar -->
-    <div class="main-container-nav">
+    <div class="main-container-nav" data-cursor="-your-color">
         <div class="floating-socials-icons">
             <div class="github-icon-container">
-                <a target="_blank" href="https://github.com/Anish-Aby"><img class="social-icons" src="./static/icons/github.png" alt="github-link"></a>
+                <a target="_blank" href="https://github.com/Anish-Aby"><img class="social-icons test-video" src="./static/icons/github.png" alt="github-link"></a>
             </div>
             <div class="linkedin-icon-container">
                 <a target="_blank" href="https://www.linkedin.com/in/anish-aby-71775b24a/"><img class="social-icons" src="./static/icons/linkedin.png" alt="linkedin-link"></a>
@@ -349,10 +352,12 @@
     <script>
         var butter = butter.init({
             cancelOnTouch: true,
-            wrapperDamper: 0.02,
+            wrapperDamper: 0.03,
         });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./script.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>

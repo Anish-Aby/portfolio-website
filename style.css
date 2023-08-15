@@ -12,10 +12,21 @@ body::-webkit-scrollbar {
 
 body {
     position: relative;
+    background-color: var(--background-color);
+}
+
+/* select none */
+body * {
+    user-select: none;
 }
 
 ::selection {
     background-color: var(--highlight-color);
+}
+
+/* cursor follower color */
+.-your-color {
+    color: var(--highlight-color);
 }
 
 /* variables */
@@ -24,6 +35,7 @@ body {
     --text-color: #B7AB98;
     --background-color: #0D0D0D;
     --width: 70%;
+    --small-width: 60%;
 }
 
 /* highlight */
@@ -46,6 +58,21 @@ body {
 .main-top-container {
     position: relative;
     width: 100%;
+}
+
+/* ! trailer */
+#trailer {
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    background-color: #EB5939;
+    border-radius: 50%;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    z-index: 1000;
+    overflow: hidden;
 }
 
 /* ! nav-bar */
@@ -214,8 +241,8 @@ body {
     align-items: center;
     gap: 5rem;
     font-family: "Avant", sans-serif;
-    font-size: 30px;
-    letter-spacing: 10px;
+    font-size: 25px;
+    letter-spacing: 12px;
 }
 
 .section-japanese-heading {
@@ -227,7 +254,7 @@ body {
 
 .about-section-body-content {
     font-family: "Avant";
-    font-size: 140px;
+    font-size: 100px;
 }
 
 /* work section */
@@ -243,7 +270,7 @@ body {
 
 .projects-container {
     font-family: "Avant";
-    font-size: 150px;
+    font-size: 130px;
     height: 100%;
 }
 
@@ -256,10 +283,70 @@ body {
 }
 
 .project-container {
+    position: relative;
     display: flex;
     align-items: center;
+    transition: color 0.5s ease-in-out;
     border-bottom: 3px var(--text-color) solid;
 }
+
+.project-container::before {
+    content: "";
+    position: absolute;
+    color: var(--background-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    opacity: 0%;
+    background-color: var(--highlight-color);
+    transition: width 1s ease-in-out;
+}
+
+.project-container-content {
+    position: relative;
+    z-index: 3;
+}
+
+.emoji-base-work-hidden::after {
+    position: absolute;
+    content: "A website which contains emojis and its descriptions.";
+    bottom: 50%;
+    right: 0;
+    transform: translate(-2%, 50%);
+    color: var(--background-color);
+    font-size: 20px;
+}
+
+.blogging-work-hidden::after {
+    position: absolute;
+    content: "A website developed by me for writing blogs.";
+    bottom: 50%;
+    right: 0;
+    transform: translate(-2%, 50%);
+    color: var(--background-color);
+    font-size: 20px;
+}
+
+.github-work-hidden::after {
+    position: absolute;
+    content: "Sleek rock, paper & scissors game.";
+    bottom: 50%;
+    right: 0;
+    transform: translate(-2%, 50%);
+    color: var(--background-color);
+    font-size: 20px;
+}
+
+.project-container:hover::before {
+    opacity: 100%;
+    width: 100%;
+}
+
+.project-container:hover {
+    color: var(--background-color);
+}
+
 
 /* technology section */
 .technology-section {
@@ -277,7 +364,11 @@ body {
     flex-direction: column;
     gap: 3rem;
     font-family: "Avant", sans-serif;
-    font-size: 150px;
+    font-size: 130px;
+}
+
+.tech-container {
+    position: relative;
 }
 
 .tech-footer-container {
@@ -434,15 +525,44 @@ a {
 }
 
 .instagram-container-contact {
+    position: relative;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
+.linkedin-container-contact {
+    position: relative;
+}
+
+.blog-container-contact {
+    position: relative;
+}
+
 .github-container-contact {
+    position: relative;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+.contact-pseudo::after {
+    content: "";
+    display: inline;
+    position: absolute;
+    height: 10%;
+    width: 0%;
+    background-color: var(--highlight-color);
+    font-size: 40px;
+    left: 0;
+    bottom: 0;
+    opacity: 0%;
+    transition: opacity 1s ease-in-out;
+}
+
+.contact-pseudo:hover::after {
+    opacity: 100%;
+    width: 100%;
 }
 
 .email-container {
@@ -570,4 +690,88 @@ a {
 
 .text-color-change {
     color: var(--background-color);
+}
+
+/* ! MEDIA QUERY */
+
+/* ! laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    /* ! true text content */
+    /* main hero section */
+    .name-katakana {
+        font-size: 80px;
+    }
+
+    .name-english {
+        font-size: 30px;
+        letter-spacing: 8px;
+    }
+
+    .landing-body-container {
+        font-size: 110px;
+    }
+
+    /* about section */
+    .section-japanese-heading {
+        font-size: 35px;
+    }
+
+    .about-section-body-content {
+        font-size: 85px;
+    }
+
+    /* work section */
+    .projects-container {
+        font-size: 90px;
+    }
+
+    .work-section {
+        width: var(--width);
+    }
+
+    .project-container {
+        width: 90%;
+    }
+
+    /* technology section */
+    .technologies-container {
+        font-size: 100px;
+    }
+
+    .tech-footer-container {
+        width: 90%;
+        font-size: 30px;
+    }
+
+    /* languages section */
+    .faq-questions-container {
+        font-size: 40px;
+    }
+
+    .question {
+        width: 90%;
+    }
+
+    /* contact me section */
+    .contact-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 3rem 0rem;
+        gap: 3rem;
+        font-family: "Avant", sans-serif;
+        font-size: 70px;
+    }
+
+    .email {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+
+    .email-details {
+        font-size: 30px;
+    }
 }
