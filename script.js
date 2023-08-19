@@ -1,5 +1,35 @@
 "use strict";
 
+// contact animations
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interval = null;
+
+$(".contact-details").on("mouseover", (event) => {
+  let iteration = 0;
+
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return event.target.dataset.value[index];
+        }
+
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iteration >= event.target.dataset.value.length) {
+      clearInterval(interval);
+    }
+
+    iteration += 1 / 3;
+  }, 30);
+});
+
 // FAQ funcitonality
 const questions = [...document.querySelectorAll(".question")];
 questions.map((question) => {
@@ -105,6 +135,15 @@ $("#faq-project").on("mouseenter", (e) => {
 });
 
 $("#faq-project").on("mouseleave", (e) => {
+  cursor.removeVideo();
+});
+
+// hobby faq
+$("#faq-hobby").on("mouseenter", (e) => {
+  cursor.setVideo("/static/video/faq-hobby.mp4");
+});
+
+$("#faq-hobby").on("mouseleave", (e) => {
   cursor.removeVideo();
 });
 
