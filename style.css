@@ -718,6 +718,12 @@ a {
     font-size: 40px;
 }
 
+/* about section */
+.about-section-body-content-overlay {
+    font-family: "Avant";
+    font-size: 100px;
+}
+
 /* project section */
 .project-container-overlay {
     display: flex;
@@ -788,13 +794,17 @@ a {
         font-size: 80px;
     }
 
+    .name-katakana-overlay {
+        font-size: 80px;
+    }
+
     .name-english {
-        font-size: 30px;
+        font-size: 20px;
         letter-spacing: 8px;
     }
 
     .landing-body-container {
-        font-size: 110px;
+        font-size: 90px;
     }
 
     /* about section */
@@ -802,14 +812,26 @@ a {
         font-size: 35px;
     }
 
+    .section-japanese-heading-overlay {
+        font-size: 35px;
+    }
+
     .about-section-body-content {
-        font-size: 85px;
+        font-size: 80px;
+    }
+
+    .about-section-body-content-overlay {
+        font-size: 78px;
     }
 
     /* work section */
     .projects-container {
-        font-size: 90px;
+        font-size: 80px;
     }
+
+    .emoji-base-work-hidden::after, .blogging-work-hidden::after, .github-work-hidden::after {
+        font-size: 11px;
+    } 
 
     .work-section {
         width: var(--width);
@@ -831,10 +853,11 @@ a {
 
     /* languages section */
     .faq-questions-container {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .question {
+        padding-top: 1rem;
         width: 90%;
     }
 
@@ -846,7 +869,7 @@ a {
         padding: 3rem 0rem;
         gap: 3rem;
         font-family: "Avant", sans-serif;
-        font-size: 70px;
+        font-size: 60px;
     }
 
     .email {
