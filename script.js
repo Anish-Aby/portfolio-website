@@ -163,3 +163,39 @@ $(".rock").on("mouseenter", (e) => {
 $(".rock").on("mouseleave", (e) => {
   cursor.removeVideo();
 });
+
+// ! section scrolling
+// getting positions
+
+// about section
+const aboutLink = document.getElementById("about-section");
+let aboutPos = aboutLink.offsetTop;
+
+$(".about-nav-link").on("click", (e) => {
+  console.log("click");
+  $(document).scrollTop(aboutPos);
+});
+
+// work section
+const workLink = document.getElementById("work-section");
+let workPos = workLink.offsetTop;
+$(".work-nav-link").on("click", (e) => {
+  console.log("click");
+  $(document).scrollTop(workPos);
+});
+
+// faq section
+const faqLink = document.getElementById("faq-section");
+let faqPos = faqLink.offsetTop;
+$(".faq-nav-link").on("click", (e) => {
+  console.log("click");
+  $(document).scrollTop(faqPos);
+});
+
+// contact section
+const contactLink = document.getElementById("contact-section");
+let contactPos = contactLink.offsetTop;
+$(".contact-nav-link").on("click", (e) => {
+  console.log("click");
+  $(document).scrollTop(contactPos);
+});
