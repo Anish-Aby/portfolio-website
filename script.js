@@ -199,3 +199,26 @@ $(".contact-nav-link").on("click", (e) => {
   console.log("click");
   $(document).scrollTop(contactPos);
 });
+
+// ! checking for mobile device
+function detectMob() {
+  const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i,
+  ];
+
+  return toMatch.some((toMatchItem) => {
+    return navigator.userAgent.match(toMatchItem);
+  });
+}
+
+let isNotPC = detectMob();
+
+if (isNotPC) {
+  cursor.destroy();
+}
