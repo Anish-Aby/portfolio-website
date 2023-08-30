@@ -273,6 +273,9 @@ body * {
     grid-template-rows: 1fr;
     align-items: center;
     text-align: center;
+    transform: translateY(-200px);
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .name-katakana {
@@ -308,6 +311,9 @@ body * {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateY(-200px);
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 /* about section */
@@ -319,6 +325,8 @@ body * {
     min-height: 100dvh;
     padding: 1rem 0;
     gap: 1rem;
+    transform: translate(-500px, 0);
+    opacity: 0;
 }
 
 .section-heading-container {
@@ -352,6 +360,8 @@ body * {
     min-height: 100dvh;
     padding: 1rem 0;
     gap: 1rem;
+    transform: translate(500px, 0);
+    opacity: 0;
 }
 
 .projects-container {
@@ -443,6 +453,8 @@ body * {
     min-height: 100vh;
     padding: 1rem 0;
     gap: 2rem;
+    opacity: 0%;
+    transform: translateX(-200px);
 }
 
 .technologies-container {

@@ -222,3 +222,83 @@ let isNotPC = detectMob();
 if (isNotPC) {
   cursor.destroy();
 }
+
+// ! gsap animation
+let tl = gsap.timeline({ defaults: { ease: "Expo.EaseOut", duration: 0.7 } });
+
+tl.from(".main-landing-video", {
+  scale: 2,
+  duration: 1,
+  opacity: 0,
+});
+
+tl.to(
+  ".landing-body-container",
+  {
+    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    y: 0,
+    opacity: 1,
+    duration: 2,
+  },
+  "-=1"
+);
+
+tl.to(
+  ".name-main-container",
+  {
+    "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    y: 0,
+    opacity: 1,
+    duration: 2,
+  },
+  "-=2"
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top center",
+    end: "center center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play reverse",
+  },
+});
+
+tl2.to(".about-section", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
+
+tl.to(".work-section", {
+  scrollTrigger: {
+    trigger: ".work-section",
+    start: "top center",
+    end: "50% center",
+    scrub: true,
+    markers: false,
+  },
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
+
+let tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".technology-section",
+    start: "top center",
+    end: "center center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play reverse reverse",
+  },
+});
+
+tl3.to(".technology-section", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
