@@ -443,6 +443,94 @@ body * {
     color: var(--background-color);
 }
 
+/* more work section */
+.more-work-section {
+    display: flex;
+    flex-direction: column;
+    width: var(--width);
+    min-height: 100dvh;
+    padding: 1rem 0;
+}
+
+.project-card-container-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom: 3px solid var(--text-color);
+    margin-top: 2rem;
+}
+
+.project-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card-header {
+    font-family: "Avant", sans-serif;
+    font-size: 110px;
+}
+
+.project-card-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+}
+
+.project-card-button {
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    background-color: var(--highlight-color);
+    border: none;
+    width: 10rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.project-card-button:hover {
+    cursor: pointer;
+}
+
+.project-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card-img-container {
+    border: 3px solid var(--highlight-color);
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.project-card-technologies-container {
+    font-family: "Montserrat", san-serrif;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.project-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.emojibase-project-card,
+.rock-project-card,
+.pig-project-card {
+    transform: translate(-500px, 0);
+    opacity: 0;
+}
+
+.todo-project-card,
+.blog-project-card {
+    transform: translate(500px, 0);
+    opacity: 0;
+}
+
 
 /* technology section */
 .technology-section {

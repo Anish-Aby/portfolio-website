@@ -302,3 +302,94 @@ tl3.to(".technology-section", {
   opacity: 1,
   duration: 2,
 });
+
+// project card scroll trigger animation
+// emojibase
+let tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".emojibase-project-card",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play reverse reverse",
+  },
+});
+
+tl4.to(".emojibase-project-card", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
+
+// to-do
+let tl5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".todo-project-card",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play reverse reverse",
+  },
+});
+
+tl5.to(".todo-project-card", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
+
+// rock
+let tl6 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".rock-project-card",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play reverse reverse",
+  },
+});
+
+tl6.to(".rock-project-card", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
+
+//blog
+let tl7 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blog-project-card",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play reverse reverse",
+  },
+});
+
+tl7.to(".blog-project-card", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
+
+// pig game
+let tl8 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".pig-project-card",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play reverse reverse",
+  },
+});
+
+tl8.to(".pig-project-card", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
