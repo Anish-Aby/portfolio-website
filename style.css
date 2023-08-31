@@ -531,6 +531,9 @@ body * {
     opacity: 0;
 }
 
+.button-link {
+    color: var(--background-color);
+}
 
 /* technology section */
 .technology-section {

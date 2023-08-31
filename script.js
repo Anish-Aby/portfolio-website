@@ -308,7 +308,7 @@ tl3.to(".technology-section", {
 let tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: ".emojibase-project-card",
-    start: "top center",
+    start: "-20% center",
     end: "bottom center",
     scrub: false,
     markers: false,
