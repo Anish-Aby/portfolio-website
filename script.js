@@ -312,7 +312,7 @@ let tl4 = gsap.timeline({
     end: "bottom center",
     scrub: false,
     markers: false,
-    toggleActions: "play play reverse reverse",
+    toggleActions: "play play play reverse",
   },
 });
 
@@ -330,7 +330,7 @@ let tl5 = gsap.timeline({
     end: "bottom center",
     scrub: false,
     markers: false,
-    toggleActions: "play play reverse reverse",
+    toggleActions: "play play play reverse",
   },
 });
 
@@ -348,7 +348,7 @@ let tl6 = gsap.timeline({
     end: "bottom center",
     scrub: false,
     markers: false,
-    toggleActions: "play play reverse reverse",
+    toggleActions: "play play play reverse",
   },
 });
 
@@ -366,7 +366,7 @@ let tl7 = gsap.timeline({
     end: "bottom center",
     scrub: false,
     markers: false,
-    toggleActions: "play play reverse reverse",
+    toggleActions: "play play play reverse",
   },
 });
 
@@ -384,7 +384,7 @@ let tl8 = gsap.timeline({
     end: "bottom center",
     scrub: false,
     markers: false,
-    toggleActions: "play play reverse reverse",
+    toggleActions: "play play play reverse",
   },
 });
 
