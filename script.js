@@ -263,7 +263,7 @@ let tl2 = gsap.timeline({
     end: "center center",
     scrub: false,
     markers: false,
-    toggleActions: "play play reverse",
+    toggleActions: "play play play reverse",
   },
 });
 
@@ -276,8 +276,8 @@ tl2.to(".about-section", {
 tl.to(".work-section", {
   scrollTrigger: {
     trigger: ".work-section",
-    start: "top center",
-    end: "50% center",
+    start: "-50% center",
+    end: "30% center",
     scrub: true,
     markers: false,
   },
