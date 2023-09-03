@@ -1021,6 +1021,335 @@ a {
 @media (min-width:961px) and (max-width:1025px) {
 
     /* tablet, landscape iPad, lo-res laptops ands desktops */
+    :root {
+        --width: 67%;
+    }
 
+    #main-landing-video {
+        width: 100vw;
+    }
+
+    /* navbar */
+    .navbar-container {
+        font-size: 19px;
+    }
+
+    /* true content */
+    .main-container-nav {
+        padding: 6rem 2rem;
+    }
+
+    /* landing */
+    .name-katakana {
+        font-size: 60px;
+    }
+
+    .name-katakana-overlay {
+        font-size: 60px;
+    }
+
+    .name-english {
+        font-size: 20px;
+        letter-spacing: 8px;
+    }
+
+    .landing-body-container {
+        font-size: 80px;
+    }
+
+    /* about section */
+    .section-japanese-heading {
+        font-size: 25px;
+    }
+
+    .section-japanese-heading-overlay {
+        font-size: 25px;
+    }
+
+    .section-english-heading {
+        font-size: 15px;
+    }
+
+    .about-section-body-content {
+        font-size: 70px;
+    }
+
+    .about-section-body-content-overlay {
+        font-size: 68px;
+    }
+
+    /* work section */
+    .work-section {
+        width: var(--width);
+    }
+
+    .projects-container {
+        font-size: 70px;
+    }
+
+    .emoji-base-work-hidden::after,
+    .blogging-work-hidden::after,
+    .github-work-hidden::after {
+        font-size: 11px;
+    }
+
+    /* more work section */
+    .more-work-section {
+        width: var(--width);
+    }
+
+    .project-card-header {
+        font-size: 80px;
+    }
+
+    .project-card-description {
+        font-size: 20px;
+    }
+
+    .project-card-img-container {
+        width: 300px;
+    }
+
+    .project-card-button {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    /* technology section */
+    .technologies-container {
+        font-size: 80px;
+    }
+
+    .tech-footer-container {
+        font-size: 30px;
+    }
+
+    /* faq section */
+    .faq-questions-container {
+        font-size: 30px;
+    }
+
+    .question {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* contact section */
+    .contact-grid-container {
+        font-size: 50px;
+    }
+
+    .email {
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+
+    .email-details {
+        font-size: 20px;
+    }
+
+}
+
+
+@media (min-width:641px) and (max-width:961px) {
+
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    :root {
+        --width: 60%;
+    }
+
+    #main-landing-video {
+        width: 100vw;
+    }
+
+    /* navbar */
+    .navbar-container {
+        font-size: 15px;
+    }
+
+    .social-icons {
+        width: 30px;
+        height: 30px;
+    }
+
+    .right-arrow-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .floating-socials-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 10px;
+    }
+
+    /* true content */
+    .main-container-nav {
+        padding: 6rem 1rem;
+    }
+
+    /* landing */
+    .name-katakana {
+        font-size: 50px;
+    }
+
+    .name-katakana-overlay {
+        font-size: 50px;
+    }
+
+    .name-english {
+        font-size: 20px;
+        letter-spacing: 8px;
+    }
+
+    .landing-body-container {
+        font-size: 50px;
+    }
+
+    /* about section */
+    .section-heading-container {
+        gap: 2rem;
+    }
+
+    .section-japanese-heading {
+        font-size: 20px;
+    }
+
+    .section-japanese-heading-overlay {
+        font-size: 20px;
+    }
+
+    .section-english-heading {
+        font-size: 10px;
+    }
+
+    .about-section-body-content {
+        font-size: 40px;
+    }
+
+    .about-section-body-content-overlay {
+        font-size: 40px;
+    }
+
+    /* work section */
+    .work-section {
+        width: var(--width);
+    }
+
+    .projects-container {
+        font-size: 40px;
+    }
+
+    .emoji-base-work-hidden::after,
+    .blogging-work-hidden::after,
+    .github-work-hidden::after {
+        display: none;
+    }
+
+    /* more work section */
+    .project-card-container-main {
+        gap: 1rem;
+    }
+
+    .more-work-section {
+        width: var(--width);
+    }
+
+    .project-card-header {
+        font-size: 40px;
+    }
+
+    .project-card-description {
+        font-size: 15px;
+    }
+
+    .project-card-img-container {
+        width: 180px;
+    }
+
+    .project-card-button {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* technology section */
+    .technologies-container {
+        font-size: 40px;
+    }
+
+    .tech-footer-container {
+        font-size: 20px;
+    }
+
+    /* languages */
+    .languages-section {
+        min-height: 250px;
+    }
+
+    .languages-section-overlay {
+        min-height: 250px;
+    }
+
+    .skills-header {
+        font-size: 20px;
+    }
+
+    .skills-header-overlay {
+        font-size: 20px;
+    }
+
+    .skills-text {
+        font-size: 40px;
+    }
+
+    .skill-text-left {
+        top: 4rem;
+    }
+
+    .skill-text-left-overlay {
+        top: 4rem;
+    }
+
+    .skill-text-right {
+        top: 9rem;
+    }
+
+    .skill-text-right-overlay {
+        top: 9rem;
+    }
+
+    /* faq section */
+    .faq-questions-container {
+        font-size: 20px;
+    }
+
+    .question {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .question-wrap {
+        grid-template-columns: 50px max-content;
+    }
+
+    .question-status {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* contact section */
+    .contact-grid-container {
+        font-size: 20px;
+    }
+
+    .email {
+        font-size: 10px;
+        letter-spacing: 5px;
+    }
+
+    .email-details {
+        font-size: 15px;
+    }
 
 }
