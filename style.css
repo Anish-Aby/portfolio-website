@@ -893,6 +893,17 @@ a {
     color: var(--background-color);
 }
 
+.fox-icon-section {
+    width: var(--width);
+    display: flex;
+    justify-content: center;
+}
+
+.fox-icon {
+    width: 50px;
+    height: 60px;
+}
+
 /* ! MEDIA QUERY */
 
 /* ! laptops */
