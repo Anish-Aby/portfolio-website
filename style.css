@@ -526,13 +526,14 @@ body * {
 
 .emojibase-project-card,
 .rock-project-card,
-.pig-project-card {
+.blog-project-card {
     transform: translate(-500px, 0);
     opacity: 0;
 }
 
 .todo-project-card,
-.blog-project-card {
+.tic-project-card,
+.pig-project-card {
     transform: translate(500px, 0);
     opacity: 0;
 }

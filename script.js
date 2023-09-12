@@ -358,8 +358,26 @@ tl6.to(".rock-project-card", {
   duration: 2,
 });
 
-//blog
+//tic-tac-toe
 let tl7 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tic-project-card",
+    start: "top center",
+    end: "bottom center",
+    scrub: false,
+    markers: false,
+    toggleActions: "play play play reverse",
+  },
+});
+
+tl7.to(".tic-project-card", {
+  x: 0,
+  opacity: 1,
+  duration: 2,
+});
+
+//blog
+let tlblog = gsap.timeline({
   scrollTrigger: {
     trigger: ".blog-project-card",
     start: "top center",
@@ -370,7 +388,7 @@ let tl7 = gsap.timeline({
   },
 });
 
-tl7.to(".blog-project-card", {
+tlblog.to(".blog-project-card", {
   x: 0,
   opacity: 1,
   duration: 2,
